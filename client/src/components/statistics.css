@@ -1,0 +1,10 @@
+.MuiPaper-root{
+    position: relative !important;
+    background-color: #cb8a2a;
+}
+
+
+
+#topChallenges #topUsers #topTeams #TopTeams #subByDate #topBySuccess{
+    height: auto !important;
+}
