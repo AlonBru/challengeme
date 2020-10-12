@@ -215,10 +215,10 @@ function UserStatistics() {
           className={classes.div}
           style={{ gridArea: "sideList"}}
         >
-          <List className={clsx(classes.listRoot, darkMode? classes.divDark: classes.divLight)} id="topUsersByTeam">
+          <List className={clsx("List-response", darkMode? classes.divDark: classes.divLight)} id="topUsersByTeam">
             <h3>Unsolved Challenges</h3>
             {userUnsolvedChallenges.map((challenge) => 
-              <ListItem>
+              <ListItem className="responsive">
                 <ListItemAvatar>
                 <Avatar>
                 <WorkIcon />

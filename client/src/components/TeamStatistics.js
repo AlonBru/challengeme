@@ -93,6 +93,7 @@ function TeamStatistics() {
       .get(`/api/v1/statistics/teams/top-user`)
       .then((r) => r.data)
       .then((r) => {
+        console.log(r);
         setTeamsTopUser(r);
         setLoading(false);
       });
@@ -114,7 +115,6 @@ function TeamStatistics() {
       .get(`/api/v1/statistics/teams/success-challenge`)
       .then((r) => r.data)
       .then((r) => {
-        console.log(r);
         setSuccessChallenges(r);
         setLoading(false);
       });
@@ -229,16 +229,16 @@ function TeamStatistics() {
         className={classes.div}
         style={{ gridArea: "sideList"}}
       >
-        <List className={clsx(classes.listRoot, darkMode? classes.divDark: classes.divLight)}>
+        <List className={clsx("List-response", darkMode? classes.divDark: classes.divLight)}>
             <h3>Top Users by team</h3>
             {teamsTopUser.map((user) => 
-              <ListItem>
+              <ListItem className="responsive">
                 <ListItemAvatar>
                 <Avatar>
                 <WorkIcon />
                   </Avatar>
                 </ListItemAvatar>
-                <ListItemText primary={`${user.firstName} - ${user.lastName}`} secondary={`Number of success: ${user["Submissions.userSuccessSubmission"]}`} />
+                <ListItemText primary={user.userName} secondary={`Number of success: ${user.Submissions[0].userSuccessSubmission}`} />
               </ListItem>
             )}
           </List>
