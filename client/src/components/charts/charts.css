@@ -5,12 +5,12 @@
 
 .chart{
     /* height: auto !important; */
-    
+
 }
 
 @media (max-width:1000px){
     .chart{
-        height: 150px;
-        width: 35vw;
+        min-height: 150px;
+        min-width: 35vw;
     }
 }

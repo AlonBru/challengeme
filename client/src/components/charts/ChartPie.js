@@ -30,6 +30,7 @@ function ChartPie({data}){
               position:'right'
             },
             responsive: true,
+            responsiveAnimationDuration: 2500,
           }}
         />
       </div>

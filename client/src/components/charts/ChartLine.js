@@ -18,9 +18,9 @@ function ChartLine({data}){
           data={state}
           options={{
             title:{
-              display:true,
-              text:data.title,
-              fontSize:20        
+              display: true,
+              text: data.title,
+              fontSize: 20,       
             },
             legend:{
               display:false,
@@ -28,6 +28,7 @@ function ChartLine({data}){
               position:'right'
             },
             responsive: true,
+            responsiveAnimationDuration: 2500,
           }}
         />
       </div>

@@ -23,6 +23,9 @@ function ChartBar({data}) {
               position:'right'
             },
             responsive: true,
+            responsiveAnimationDuration: 2500,
+            paddingBottom: 0,
+            marginBottom: 0
           }}
         />
     </div>
